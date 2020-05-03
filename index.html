@@ -20,6 +20,7 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#twitch">Twitch</a></li>
                     <!--<li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>-->
                 </ul>
             </div>
@@ -73,7 +74,23 @@
             <!--<div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-download mr-2"></i><span>Download Now!</span></a></div>-->
         </div>
     </section>
-    <section id="contact" class="text-center" style="background-color: rgb(255,255,255);">
+    <section id="twitch" class="text-center" style="background-color: rgb(255,255,255);">
+        <!-- Add a placeholder for the Twitch embed -->
+        <div id="twitch-embed"></div>
+    
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+                new Twitch.Embed("twitch-embed", {
+                width: 854,
+                height: 480,
+                channel: "benthedev",
+            });
+        </script>
+    </section>
+    <section>
         <!-- TBD if I want it or not
             <div class="container">
                 <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>
@@ -100,20 +117,6 @@
                 </div>
             </div>
             -->
-        <!-- Add a placeholder for the Twitch embed -->
-        <div id="twitch-embed"></div>
-    
-        <!-- Load the Twitch embed script -->
-        <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    
-        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-        <script type="text/javascript">
-                new Twitch.Embed("twitch-embed", {
-                width: 854,
-                height: 480,
-                channel: "benthedev",
-            });
-        </script>
     </section>
     <footer class="footer text-center">
         <div class="container">
