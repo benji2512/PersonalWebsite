@@ -65,10 +65,10 @@
             <hr class="star-light mb-5">
             <div class="row">
                 <div class="col-lg-4 ml-auto">
-                    <p class="lead">I am a software engineering student of Dublin City University. I get excited about cutting edge technology and learning new ways to automate workflows, especially when it come to chatbots and assistants!</p>
+                    <p class="lead">I am a software engineering student of Dublin City University. I get excited about cutting edge technology and learning new ways to automate workflows, especially when it come to chatbots and personal assistants! My final year project for my undergraduate degree is a student personal assistant a kin to how Alexa and Google Assistant but in Messenger and Discord</p>
                 </div>
                 <div class="col-lg-4 mr-auto">
-                    <p class="lead">My interests reaches far and wide. I stream on Twitch.tv in my spare time and currently I am pursuing it as a replacement job for the lat year of my Degree. I love watching various sporting disciplines and how the athlethes train and improve so I can adapt them into my own passion which is Football(Soccer)</p>
+                    <p class="lead">My interests reaches far and wide. I stream on Twitch.tv in my spare time. I love watching various sporting disciplines. How the athlethes train and improve in their sport is so fasinating to me, I try to understand how and why they do what they do so I can adapt them into my own passion which is Football(Soccer)</p>
                 </div>
             </div>
             <!--<div class="text-center mt-4"><a class="btn btn-outline-light btn-xl" role="button" href="#"><i class="fa fa-download mr-2"></i><span>Download Now!</span></a></div>-->
@@ -87,33 +87,32 @@
             <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
             <script type="text/javascript">
                     new Twitch.Embed("twitch-embed", {
-                    width: 854,
-                    height: 480,
+                    width: "900",
+                    height: "500",
                     channel: "benthedev",
                 });
             </script>
             <a href="https://merch.streamelements.com/benthedev"><img class="img-fluid" src="assets/img/benthedev_merch_panel.png"></a>
         </div>
     </section>
-    <section>
-        <!-- TBD if I want it or not
+    <section style="background-color: rgb(49,150,250);">
             <div class="container">
-                <h2 class="text-uppercase text-center text-secondary mb-0">Contact Me</h2>m
-                <hr class="star-dark mb-5">
+                <h2 class="text-uppercase text-center text-white  mb-0">Contact Me</h2>
+                <hr class="star-light mb-5">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate" action="https://formspree.io/xqkgaped" method="POST">
                             <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input class="form-control" type="text" id="name" required="" placeholder="Name"><small class="form-text text-danger help-block"></small></div>
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Name</label><input name="Name (Required)" class="form-control" type="text" id="name" required="" placeholder="Name"><small class="form-text text-danger help-block"></small></div>
                             </div>
                             <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address</label><input class="form-control" type="email" id="email" required="" placeholder="Email Address"><small class="form-text text-danger help-block"></small></div>
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email Address (Required)</label><input name="_replyto" class="form-control" type="email" id="email" required="" placeholder="Email Address"><small class="form-text text-danger help-block"></small></div>
                             </div>
                             <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input class="form-control" type="tel" id="phone" required="" placeholder="Phone Number"><small class="form-text text-danger help-block"></small></div>
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Phone Number</label><input name="Phone Number (Optional)" class="form-control" type="tel" id="phone"  placeholder="Phone Number"><small class="form-text text-danger help-block"></small></div>
                             </div>
                             <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" id="message" required="" placeholder="Message" rows="5"></textarea><small class="form-text text-danger help-block"></small></div>
+                                <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea name="Message" class="form-control" id="message" required="" placeholder="Message" rows="5"></textarea><small class="form-text text-danger help-block"></small></div>
                             </div>
                             <div id="success"></div>
                             <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
@@ -121,7 +120,6 @@
                     </div>
                 </div>
             </div>
-            -->
     </section>
     <footer class="footer text-center">
         <div class="container">
@@ -210,6 +208,10 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+        formbutton("create", {action: "https://formspree.io/xqkgaped"})
+    </script>
 </body>
-
 </html>
